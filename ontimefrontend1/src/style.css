@@ -1,0 +1,71 @@
+:root {
+    --color-bg: #27005D;
+    --color-button: #9400FF;
+    --color-field: #E4F1FF;
+    --color-detail: #AED2FF;
+}
+
+body{
+    background-color: var(--color-detail);
+    background-image: url('./bg_cal1.png');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+   
+}
+
+.navbar {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: var(--color-bg); 
+    color: white;
+    padding: 10px 0; 
+    text-align: left; 
+    
+}
+
+.navbar h1 {
+    padding-left: 3rem;
+    margin: 0; 
+    font-size: 3rem; 
+    font-weight: bold;
+    -webkit-text-fill-color: transparent; 
+    background: linear-gradient(180deg,rgba(148, 0, 255, 1) 0%, rgba(89, 0, 153, 1) 100%); 
+   -webkit-background-clip: text; 
+}
+
+.logandreg{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin: 10rem 20rem 0rem 20rem;
+    border: var(--color-fieldc) solid 1px;
+    border-radius: 25px;
+    background-color: var(--color-field);
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    color: var(--color-bg)
+    
+}
+
+.logandreg label{
+    font-size: 1rem;
+    color: black;
+}
+
+.logandreg h2{
+    font-size: 2rem;
+}
+
+.loginButton{
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    background-color: var(--color-bg);
+    color: var(--color-field);
+    font-size: 20px;
+    border-radius: 10px;
+}
