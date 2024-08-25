@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
-import Login from './Login';
-import Register from './Register';
-import LogAndReg from './LogAndReg';
+import Login from './login';
+import Register from './register';
+import CalendarD from './calendarD';
 import './style.css'
 
 function App() {
     const [token, setToken] = useState(null);
+    const [isRegistering, setIsRegistering] = useState(false);
 
     if (!token) {
         return (
@@ -15,9 +16,11 @@ function App() {
                   <h1>toTime</h1>
                 </div>
                 <main>    
-                   {/* <Login setToken={setToken} />
-                    <Register /> */}
-                    <Login setToken={setToken} />
+                    {isRegistering ? (
+                        <Register setIsRegistering={setIsRegistering} />
+                    ) : (
+                        <Login setToken={setToken} setIsRegistering={setIsRegistering} />
+                    )}
                 </main>
             </div>
         );
@@ -25,10 +28,13 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">
-                <h1>Kalender mit Notizen</h1>
-                {/* <CalendarComponent token={token} /> */}
-            </header>
+                <div className='navbar'>
+                  <h1>toTime</h1>
+                </div>
+                <main>
+                { <CalendarD token={token} /> }
+                </main>
+                
         </div>
     );
 }

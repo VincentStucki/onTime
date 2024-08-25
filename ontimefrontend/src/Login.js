@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 //npm install axios
-const Login = ({ setToken }) => {
+const Login = ({ setToken, setIsRegistering }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -14,7 +14,13 @@ const Login = ({ setToken }) => {
         }
     };
 
+
     return (
+        <div className='logandreg-container'>
+        <div className="intro-text">
+            <h1>Simple, easy, flexible <br /> Calendar</h1>
+           
+        </div>
         <div className="logandreg">
             <h2>Login</h2>
             <label>Username</label> 
@@ -31,7 +37,11 @@ const Login = ({ setToken }) => {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
             /> <br />
+            <div className='buttonGroup'>
+            <button onClick={() => setIsRegistering(true)} className="registerButton">register</button>
             <button onClick={handleLogin} className="loginButton">Login</button>
+            </div>
+            </div>
         </div>
     );
 };

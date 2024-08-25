@@ -36,23 +36,48 @@ body{
    -webkit-background-clip: text; 
 }
 
-.logandreg{
+.logandreg-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 10rem auto; 
+    max-width: 1200px; 
+    padding: 0 2rem; 
+}
+
+.intro-text {
+    flex: 1; 
+    margin-right: 4rem; 
+    max-width: 300px; 
+    color: var(--color-field);
+    text-align: left; 
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.logandreg {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    margin: 10rem 20rem 0rem 20rem;
     border: var(--color-fieldc) solid 1px;
     border-radius: 25px;
     background-color: var(--color-field);
-    padding-bottom: 2rem;
-    padding-left: 2rem;
-    color: var(--color-bg)
-    
+    padding: 2rem;
+    color: var(--color-bg);
+    min-width: 400px;
+    max-width: 600px; 
 }
 
+
 .logandreg label{
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: black;
 }
 
@@ -60,12 +85,103 @@ body{
     font-size: 2rem;
 }
 
+.logandreg input{
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 7px 5px;
+    margin-right: 5px;
+    border: none;
+    
+}
+.logandreg input:active{
+    border-color: var(--color-bg);
+}
+
 .loginButton{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     text-align: center;
     background-color: var(--color-bg);
     color: var(--color-field);
     font-size: 20px;
-    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
 }
+
+.loginButton:hover{
+    background-color: var(--color-button);
+}
+
+.loginButton:active {
+    background-color: var(--color-bg);
+    border-color: #000000;
+    transform: scale(.96);
+  }
+
+  .registerButton{
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    color: var(--color-bg);
+    border: none;
+    background-color: var(--color-field);
+    font-size: 15px;
+    padding-bottom: 0;
+  }
+  .registerButton:hover{
+    color: var(--color-button);
+    text-decoration: underline;
+  }
+
+.logandreg .buttonGroup {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 1rem; 
+}
+
+.logandreg .button-group button {
+    flex: 1; 
+    margin-right: 0.5rem; 
+}
+
+.logandreg .button-group button:last-child {
+    margin-right: 0; 
+}
+
+@media (max-width: 768px) {
+    .logandreg {
+        margin: 2rem; 
+        padding: 1rem; 
+    }
+
+    .logandreg .button-group {
+        flex-direction: column; 
+    }
+
+    .logandreg .button-group button {
+        margin-bottom: 0.5rem; 
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logandreg {
+        margin: 1rem; 
+    }
+
+    .navbar h1 {
+        font-size: 2rem; 
+    }
+
+    .logandreg h2 {
+        font-size: 1.5rem;
+    }
+
+    .logandreg input {
+        font-size: 1rem; 
+    }
+}
+
+
+  
